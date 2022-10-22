@@ -1,9 +1,9 @@
 import React from "react";
 import Helmet from "../compononts/helmet/Helmet";
 import { Container, Row, Col } from "reactstrap";
-import heroImg from '../assets/images/hero-img.png'
-import '../styles/home.css'
- 
+import heroImg from "../assets/images/hero-img.png";
+import "../styles/home.css";
+
 const Home = () => {
   const year = new Date().getFullYear();
 
@@ -19,7 +19,9 @@ const Home = () => {
                 <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Voluptatum enim harum facere esse aperiam dolores hic non
-                  tempora error inventore.
+                  tempora error inventore. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Tempore, dignissimos. Lorem
+                  ipsum dolor sit amet.
                 </p>
                 <div className="button_area">
                   <button className="shop_button">Shop Now</button>

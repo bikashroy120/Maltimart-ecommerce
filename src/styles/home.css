@@ -20,6 +20,10 @@
   font-weight: 500;
 }
 
+.button_area{
+    margin-top: 20px;
+}
+
 .shop_button{
     padding: 5px 10px;
     font-size: 1rem;
@@ -29,3 +33,7 @@
 
 }
 
+
+.hero_content{
+    margin-top: 55px;
+}
