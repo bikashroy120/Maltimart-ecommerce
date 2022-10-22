@@ -1,0 +1,95 @@
+header{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nav_wapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo img{
+    width: 40px;
+
+}
+
+.content h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.content p{
+    display: none;
+}
+
+.nevigations{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav_icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; 
+}
+
+.nav_icons img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.nav_active{
+    font-weight: 700;
+}
+
+.fav_icons,.cart_icons{
+    position: relative;
+
+}
+
+.fav_icons i,.cart_icons i{
+ font-size: 1.4rem;
+cursor: pointer;
+}
+
+.fav-bega{
+    position: absolute;
+    contain: '';
+    top: -1%;
+    right: -15%;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--primary-color);
+    font-weight: 600;
+    z-index: 10;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
