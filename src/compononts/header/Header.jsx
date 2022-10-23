@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef,useEffect} from 'react'
 import logo from '../../assets/images/eco-logo.png'
 import { Container,Row } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
@@ -23,8 +23,30 @@ const Header = () => {
         }
     ]
 
+
+    const headerRef = useRef(null);
+    const nemuRef = useRef(null);
+
+    const stickyHeaderFun = ()=>{
+        window.addEventListener("scroll",()=>{
+            if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+                headerRef.current.classList.add('sticke_header')
+            }else{
+                headerRef.current.classList.remove('sticke_header')
+            }
+        })
+    }
+
+
+    useEffect(()=>{
+        stickyHeaderFun();
+        return ()=>window.removeEventListener("scroll",stickyHeaderFun)
+    })
+
+    const navTrogle = ()=>nemuRef.current.classList.toggle("mobil_show")
+
   return (
-    <header>
+    <header className='header' ref={headerRef}>
         <Container>
             <Row>
                 <div className='nav_wapper'>
@@ -36,7 +58,7 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <div className='nevigations'>
+                    <div className='nevigations' ref={nemuRef} onClick={navTrogle}>
                         <ul className='menu'>
                             {
                                 nav_links.map((item,index)=>(
@@ -51,21 +73,24 @@ const Header = () => {
                     </div>
 
                     <div className="nav_icons">
-                        <span className='fav_icons'>
-                            <i class="ri-heart-line"></i>
+                        <div className='fav_icons'>
+                            <i className="ri-heart-line"></i>
                             <span className="fav-bega">
                                 1
                             </span>
-                        </span>
-                        <span className='cart_icons'>
-                            <i class="ri-shopping-cart-2-line"></i>
+                        </div>
+                        <div className='cart_icons'>
+                            <i className="ri-shopping-cart-2-line"></i>
                             <span className="fav-bega">
                                 1
                             </span>
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src={img} alt="" />
-                        </span>
+                        </div>
+                        <div className='mobile_nav' onClick={navTrogle}>
+                            <span><i className='ri-menu-line'></i></span>
+                        </div>
                     </div>
                 </div>
             </Row>
