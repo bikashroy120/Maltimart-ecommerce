@@ -12,8 +12,11 @@ import Clock from "../compononts/clock/Clock";
 
 const Home = () => {
 
-  const [trendingProduct,settrendingProduct] = useState()
-  const [bestSeles,setbestSeles] = useState()
+  const [trendingProduct,settrendingProduct] = useState([]);
+  const [bestSeles,setbestSeles] = useState([]);
+  const [ArrivalsProduct,setArrivalsProduct] = useState([]);
+  const [werlessProduct,setwerlessProduct] = useState([]);
+  const [propulorCata,setpropulorCata] = useState([]);
 
 
   useEffect(()=>{
@@ -23,6 +26,15 @@ const Home = () => {
 
     const bestSelesFilter = products.filter((item)=>item.category === "sofa")
     setbestSeles(bestSelesFilter)
+
+    const mobilesFilter = products.filter((item)=>item.category === "mobile")
+    setArrivalsProduct(mobilesFilter)
+
+    const werlessProductfilter = products.filter((item)=>item.category === "wireless")
+    setwerlessProduct(werlessProductfilter)
+
+    const propulorCatafilter = products.filter((item)=>item.category === "watch")
+    setpropulorCata(propulorCatafilter)
   },[])
 
 
@@ -103,6 +115,32 @@ const Home = () => {
                 </Col>
             </Row>
           </Container>
+      </section>
+
+      {/* New_arrivals Product hear */}
+      <section className="New_arrivals">
+        <Container>
+          <Row>
+            <Col lg='12' md='12' className="text-center">
+              <h2 className="section_title">New Arrivals</h2>
+            </Col>
+            <ProductList products={ArrivalsProduct}/>
+            <ProductList products={werlessProduct}/>
+          </Row>
+        </Container>
+      </section>
+
+
+    {/* New_arrivals Product hear */}
+      <section className="New_arrivals">
+        <Container>
+          <Row>
+            <Col lg='12' md='12' className="text-center mb-5">
+              <h2 className="section_title">Popular in Category</h2>
+            </Col>
+            <ProductList products={propulorCata}/>
+          </Row>
+        </Container>
       </section>
 
     </Helmet>
