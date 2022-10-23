@@ -43,3 +43,26 @@
     font-weight: 600;
     color: var(--primary-color);
 }
+
+
+.timer_count{
+    background-color: var(--primary-color);
+    height: 300px;
+}
+
+.timer_count img{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.timer_button{
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+.timer_button :hover{
+    color: var(--primary-color);
+}

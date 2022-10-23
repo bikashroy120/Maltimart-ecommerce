@@ -13,7 +13,7 @@ const ProductCart = ({item}) => {
   }
 
   return (
-    <Col lg='3' md='4'>
+    <Col lg='3' md='4' className='mb-2'>
       <div className='product_item'>
         <div className="product_img">
           <motion.img whileHover={{scale:0.9}} style={{cursor: "pointer"}} onClick={()=>Routing(item.id)} src={item.imgUrl} alt="" />

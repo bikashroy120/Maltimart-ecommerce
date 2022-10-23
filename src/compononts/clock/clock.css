@@ -1,0 +1,11 @@
+.clock_wapper{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.clock_data{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
