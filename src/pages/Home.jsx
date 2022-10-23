@@ -1,11 +1,24 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import Helmet from "../compononts/helmet/Helmet";
 import { Container, Row, Col } from "reactstrap";
 import heroImg from "../assets/images/hero-img.png";
 import "../styles/home.css";
 import Services from "../compononts/Services/Services";
+import products from '../assets/data/products'
+import ProductList from "../compononts/UI/ProductList";
 
 const Home = () => {
+
+  const [trendingProduct,settrendingProduct] = useState()
+  const [bestSeles,setbestSeles] = useState()
+
+
+  useEffect(()=>{
+    const trindingFilter = products.filter((item)=>item.category === "chair")
+    settrendingProduct(trindingFilter)
+  },[])
+
+
   const year = new Date().getFullYear();
 
   return (
@@ -38,6 +51,16 @@ const Home = () => {
         </Container>
       </section>
       <Services />
+      <section className="tringding_product">
+        <Container>
+          <Row>
+            <Col lg='12' md='12' className="text-center">
+              <h2 className="section_title">Trending Product</h2>
+            </Col>
+            <ProductList products={trendingProduct}/>
+          </Row>
+        </Container>
+      </section>
     </Helmet>
   );
 };
