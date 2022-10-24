@@ -9,3 +9,30 @@
     align-items: center;
     gap: 15px;
 }
+
+@media only screen and (max-width:984px) {
+    .clock_wapper{
+        justify-content: center;
+    }
+}
+
+
+@media only screen and (max-width:768px) {
+    .clock_wapper{
+        justify-content: center;
+    }
+
+    .clock_data{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .clock_data h1{
+        font-size: 1.2rem !important;
+    }
+
+    .clock_data h5{
+        font-size: 0.7rem !important;
+    }
+}

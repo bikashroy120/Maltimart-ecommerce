@@ -3,6 +3,11 @@
     background-color: var(--primary-color);
 }
 
+
+.footer_box{
+    margin-bottom: 35px;
+}
+
 .footer_box h2{
     font-size: 1rem;
     font-weight: 600;

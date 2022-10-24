@@ -8,7 +8,7 @@ const Footer = () => {
     <section className="footer">
       <Container>
         <Row>
-          <Col lg="4">
+          <Col lg="4" md='6'>
             <div className="footer_box">
               <h2>maltimart</h2>
               <p>
@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col lg="3">
+          <Col lg="3" md='6'>
             <div className="footer_box">
               <h2>Top Category</h2>
                 <ul>
@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col lg="2">
+          <Col lg="2" md='6'>
           <div className="footer_box">
               <h2>Useful Links</h2>
                 <ul>
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col lg="3">
+          <Col lg="3" md='6'>
             <div className="footer_box">
               <h2>Contact</h2>
               <span><i className="ri-map-pin-line"></i>

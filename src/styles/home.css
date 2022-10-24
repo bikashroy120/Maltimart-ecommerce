@@ -66,3 +66,56 @@
 .timer_button :hover{
     color: var(--primary-color);
 }
+
+
+
+@media only screen and (max-width:984px) {
+    .hero_content h2{
+        font-size: 1.6rem;
+    }
+
+    .hero_content{
+        margin-top: 0px;
+    }
+
+    .hero_content p{
+        color: var(--primary-color);
+        line-height: 25px;
+        font-size: 0.9rem;
+    }
+
+    .section_title{
+        font-size: 1.4rem;
+    }
+
+    .text-end{
+        display: none;
+    }
+
+    .clock_top_content{
+        text-align: center;
+    }
+
+    .timer_count_botton{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+
+@media only screen and (max-width:768px) {
+    .clock_top_content h4{
+        font-size: 0.9rem !important;
+    }
+
+    .clock_top_content h3{
+        font-size: 1.2rem !important;
+    }
+
+    .timer_button{
+        font-size: 0.8rem !important;
+    }
+}
