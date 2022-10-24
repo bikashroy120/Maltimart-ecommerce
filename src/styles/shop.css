@@ -1,0 +1,37 @@
+ 
+ .filter_widget select{
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+ }
+
+ .filter_widget select:focus{
+    outline: none;
+ }
+
+
+ .filter_widget select option{
+    font-size: 0.9rem;
+ }
+
+
+ .search_box{
+    border: 1px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+ }
+
+ .search_box input{
+    width: 100%;
+    outline: none;
+    border: none;
+ }
+
+ .search_box span{
+    cursor: pointer;
+    padding: 1px 10px;
+ }

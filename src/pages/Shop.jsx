@@ -1,10 +1,13 @@
 import React from 'react'
 import Helmet from '../compononts/helmet/Helmet'
 import { Container, Row, Col } from "reactstrap";
+import CommongSection from '../compononts/UI/CommongSection';
+import '../styles/shop.css'
 
 const Shop = () => {
   return (
     <Helmet title={"shop"}>
+      <CommongSection title={"Product"}/>
       <section className='shop_section'>
           <Container>
             <Row>
