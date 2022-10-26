@@ -1,0 +1,46 @@
+.tab_ber ul{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tab_ber ul li{
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+
+.active{
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.revies_box{
+    width: 400px;
+    margin-bottom: 2rem;
+}
+
+.review_top {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.review_top img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.review_top h2{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.header_buttom{
+    margin-top: 1rem;
+}
+

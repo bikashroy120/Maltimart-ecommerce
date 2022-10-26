@@ -8,6 +8,8 @@ import { Rating } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import '../styles/productDeteles.css'
+import TabSection from '../compononts/tabSection/TabSection'
+import ProductSlyder from '../compononts/productSlyder/ProductSlyder'
 
 
 const ProductDetails = () => {
@@ -16,7 +18,10 @@ const ProductDetails = () => {
 
   const Product = products.find((item)=>item.id===params.id)
   const {avgRating,category,description,imgUrl,price,productName,shortDesc,reviews}= Product
-  console.log(reviews)
+
+  const filterCategory = products.filter((item)=>item.category === category)
+
+
 
 
 
@@ -49,6 +54,21 @@ const ProductDetails = () => {
             </Col>
           </Row>
         </Container>
+      </section>
+
+      <section className='tabs_section'>
+          <TabSection description={description} reviews={reviews}/>
+      </section>
+
+      <section className='minget_section'>
+          <Container>
+            <Row>
+              <Col lg="12">
+                  <h2>You might also like</h2>
+              </Col>
+              <ProductSlyder filterCategory={filterCategory} />
+            </Row>
+          </Container>
       </section>
     </Helmet>
   )
