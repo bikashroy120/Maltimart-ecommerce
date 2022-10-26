@@ -39,9 +39,9 @@
 }
 
 .section_title{
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--primary-color);
+    font-size: 1.6rem !important;
+    font-weight: 600 !important;
+    color: var(--primary-color) !important;
 }
 
 
@@ -72,6 +72,7 @@
 @media only screen and (max-width:984px) {
     .hero_content h2{
         font-size: 1.6rem;
+        color: var(--primary-color);
     }
 
     .hero_content{

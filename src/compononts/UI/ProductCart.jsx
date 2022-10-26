@@ -3,10 +3,23 @@ import { Col } from 'reactstrap'
 import './product.css'
 import {motion} from "framer-motion"
 import {useNavigate} from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import {cartActions} from '../../redux/cart/cartSlice'
 
 const ProductCart = ({item}) => {
+  const dispatch = useDispatch()
 
   const navigate = useNavigate()
+
+  const addToCart = () =>{
+    dispatch(cartActions.addToCart({
+        id:item.id,
+        productname: item.productName,
+        feature_image: item.imgUrl,
+        price:Number(item.price),
+        qut:1,
+    }));
+  }
 
   const Routing =(id)=>{
     navigate(`/shop/${id}`)
@@ -22,7 +35,7 @@ const ProductCart = ({item}) => {
         <span className='catagory'>{item.category}</span>
         <div className="Product_bottom">
             <span className='Product_Price'>${item.price}</span>
-            <span className='add_cart'>
+            <span className='add_cart' onClick={addToCart}>
               <i className='ri-add-line'></i>
             </span>
         </div>

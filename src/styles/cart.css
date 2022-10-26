@@ -1,0 +1,12 @@
+
+.emty_cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.emty_cart img{
+    width: 300px;
+}

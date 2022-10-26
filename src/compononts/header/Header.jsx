@@ -4,10 +4,11 @@ import { Container,Row } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 import img from '../../assets/images/user-icon.png'
 import './header.css'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
 
-
+    const cartItems = useSelector((state)=>state.cart.itemList);
     const nav_links = [
         {
             name :"Home",
@@ -82,7 +83,7 @@ const Header = () => {
                         <div className='cart_icons'>
                             <i className="ri-shopping-cart-2-line"></i>
                             <span className="fav-bega">
-                                1
+                                {cartItems.length}
                             </span>
                         </div>
                         <div>
