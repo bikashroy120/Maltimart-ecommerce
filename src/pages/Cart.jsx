@@ -6,6 +6,9 @@ import CommongSection from "../compononts/UI/CommongSection";
 import img from "../assets/images/empty_cart-512.webp"
 import '../styles/cart.css'
 import { Link } from 'react-router-dom';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const Cart = () => {
 
@@ -34,12 +37,22 @@ const Cart = () => {
                     </thead>
                     <tbody>
                       {
-                        cartItems.map((item)=>{
+                        cartItems.map((item,index)=>{
                           return(
-                            <tr>
-                              {/* <td><img src={item.feature_image} alt="" /></td> */}
-                              <td>{item.productname}</td>
-                              <td>{item.amount_item}</td>
+                            <tr className='cart_item' key={index}>
+                              <td className='cart_img'><img src={item.feature_image} alt="" /></td>
+                              <td><span className='span'>{item.productname}</span></td>
+                              <td><span className='span'>{item.amount_item}</span></td>
+                              <td>
+                              <div className='increment_box'>
+                                <button><RemoveIcon /></button>
+                                <span>2</span>
+                                <button><AddIcon /></button>
+                              </div>
+                              </td>
+                              <td>
+                                <span className='span'><DeleteIcon /></span>
+                              </td>
                             </tr>
                           )
                         })

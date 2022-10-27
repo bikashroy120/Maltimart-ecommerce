@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './productSlyder.css'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { useNavigate } from 'react-router-dom';
 
 
 function SampleNextArrow(props) {
@@ -63,6 +64,9 @@ const ProductSlyder = ({filterCategory}) => {
           }
         ]
       };
+
+     const navigate = useNavigate()
+
   return (
     <Slider {...settings}>
        {filterCategory && filterCategory.map((item,index)=>{
