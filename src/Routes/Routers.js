@@ -7,6 +7,9 @@ import ProductDetails from '../pages/ProductDetails';
 import Shop from '../pages/Shop';
 import Signup from '../pages/Signup';
 import Checkout from "../pages/Checkout"
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const Routers = () => {
   return (
@@ -22,4 +25,5 @@ const Routers = () => {
   )
 }
 
-export default Routers
+export default Routers;
+
