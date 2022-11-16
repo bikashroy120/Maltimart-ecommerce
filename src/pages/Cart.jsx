@@ -5,7 +5,7 @@ import Helmet from '../compononts/helmet/Helmet'
 import CommongSection from "../compononts/UI/CommongSection";
 import img from "../assets/images/empty_cart-512.webp"
 import '../styles/cart.css'
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -13,6 +13,7 @@ import { cartActions } from '../redux/cart/cartSlice';
 
 const Cart = () => {
 
+  const navigate = useNavigate()
   const dispatch = useDispatch();
   const cartItems = useSelector((state)=>state.cart.itemList);
   const totle = useSelector((state)=>state.cart.subtotal);
@@ -42,6 +43,14 @@ const Cart = () => {
       useEffect(() => {
         dispatch(cartActions.getTotals())
       }, [dispatch])
+
+      const chec = ()=>{
+        navigate('/checkout')
+      }
+
+      const shop = ()=>{
+        navigate('/shop')
+      }
 
   return (
     <Helmet title="Cart">
@@ -95,8 +104,8 @@ const Cart = () => {
                     <h2>${totle}</h2>
                   </div>
                   <p>taxce and shippping will calculate checkout</p>
-                  <button className='btn btn-secondary w-100 mt-3 mb-3'>Checkout</button>
-                  <button className='btn btn-secondary w-100'>Continue shopping</button>
+                  <button onClick={chec} className='btn btn-secondary w-100 mt-3 mb-3'>Checkout</button>
+                  <button onClick={shop} className='btn btn-secondary w-100'>Continue shopping</button>
                 </div>
             </Col>
           </Row>
