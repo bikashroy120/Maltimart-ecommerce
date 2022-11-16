@@ -64,3 +64,126 @@
 .cart_item td .span{
     padding-top: 35px !important;
 }
+
+
+.cart_item td .spanbutton{
+    cursor: pointer;
+    color: rgb(153, 39, 39);
+}
+
+
+.cart_item td .spanbutton:hover{
+    color: red;
+}
+
+.wapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+
+.wapper h2{
+    font-size: 20px;
+}
+
+
+
+@media Only screen and (max-width:424px){
+
+    .increment_box{
+        border: 1px solid var(--primary-color);
+        width: 80px !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+        margin: 0 !important;
+        overflow: hidden;
+    }
+    
+    .increment_box button{
+        border: none;
+        outline: none;
+        padding: 3px 2px !important;
+        background-color: transparent;
+        font-size: 0.5rem;
+    }
+    
+    .increment_box span{
+        border-right: 1px solid var(--primary-color);
+        border-left: 1px solid var(--primary-color);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 3px !important;
+    }
+    
+    .increment_box button:hover{
+        background: var(--primary-color);
+        color: #fff;
+    }
+    
+    
+    .add_button{
+        padding: 5px 20px;
+        background-color: var(--primary-color);
+        color: #fff;
+        border-radius: 5px;
+    }
+    
+    .cart_img img{
+        width: 30px;
+        height: 30px;
+        margin: 0 !important;
+    }
+
+    .button-icon{
+        font-size: 0.3rem;
+    }
+
+    .cart_item .span{
+        font-size: 0.8rem;
+    }
+
+    .table tr{
+        font-size: 0.9rem;
+    }
+
+}
+
+@media Only screen and (max-width:374px){
+
+    .increment_box{
+        border: 1px solid var(--primary-color);
+        width: 40px !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        border-radius: 5px;
+        margin: 0 !important;
+        overflow: hidden;
+    }
+
+    .increment_box span{
+        border-top: 1px solid var(--primary-color);
+        border-bottom: 1px solid var(--primary-color);
+        border-left: none;
+        border-right: none;
+
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 3px !important;
+    }
+}
+
+/* 
+<Col lg="12">
+                    <div className='emty_cart'>
+                      <img src={img} alt="" />
+                      <h2><Link to="/shop">Cart is Emity !! Contune Shoping </Link></h2>
+                    </div>
+                  </Col> */
